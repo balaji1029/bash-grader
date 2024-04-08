@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Objective}{1}{section.1}%
+\contentsline {section}{\numberline {2}Bash Grader}{1}{section.2}%
+\contentsline {section}{\numberline {3}Applications}{1}{section.3}%
+\contentsline {section}{\numberline {4}Basic Idea of the code}{1}{section.4}%
+\contentsline {section}{\numberline {5}Working of the code}{1}{section.5}%
+\contentsline {section}{\numberline {6}Usage}{1}{section.6}%
+\contentsline {section}{\numberline {7}Customizations included}{1}{section.7}%
+\contentsline {section}{\numberline {8}Makefile}{1}{section.8}%
+\contentsline {section}{\numberline {9}Sample}{1}{section.9}%
