@@ -9,9 +9,14 @@ for file in "$@"; do
     # Check if $MAIN exists
     if [ ! -f "$MAIN" ]; then
         touch "$MAIN"
+<<<<<<< HEAD
         echo "Roll_number,Name,$file" > "$MAIN"
         tail -n +2 "$SCRIPT_DIR/$file.csv" >> "$MAIN"
         cat "$MAIN"
+=======
+        # echo "Roll_number,Name,$file" > "$MAIN"
+        tail -n +2 "$SCRIPT_DIR/$file.csv" >> "$MAIN"
+>>>>>>> bde852d416de6a9b9a578ad3f0bc5cddcdd64abc
     else
         echo "Roll_number,Name"
         # Check if $MAIN has total header
