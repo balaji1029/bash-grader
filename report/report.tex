@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[rightcaption]{sidecap}
+\usepackage{verbatim}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\usepackage 
+[ a4paper , hmargin =1.2 in , bottom =1.5 in ] { geometry }
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% The titles...
+\title{Bash Grader}
+\author{Balaji Karedla}
+\date{April, 2024}
+
+% The header...
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyhead[L]{Bash Grader}
+\fancyhead[R]{Balaji Karedla}
+
+% Bibliography...
+\addbibresource{references}
+
+% Image path...
+\graphicspath{ {./images/} }
+
+\begin{document}
+\pagenumbering{gobble}
+
+\maketitle
+
+\pagebreak
+\pagenumbering{roman}
+
+\tableofcontents
+
+\pagebreak
+\pagenumbering{arabic}
+
+\section{Objective}
+\section{Bash Grader}
+\section{Applications}
+\section{Basic Idea of the code}
+\section{Working of the code}
+\section{Usage}
+\section{Customizations included}
+\section{Makefile}
+\section{Sample}
+
+\begin{lstlisting}
+    # hello.py
+    a = 5
+    a += 5
+    print(a)
+\end{lstlisting}
+
+For more info, refer to~\cite{balaji}
+
+\printbibliography{}
+
+\end{document}
