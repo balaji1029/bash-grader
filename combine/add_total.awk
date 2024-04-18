@@ -20,8 +20,13 @@ NR == 1 {
 
     if (already_present) {
         print $0
-    } else {    
-        print $0, file
+    } else {
+        out = $1
+        for (i=2; i < NF; i++) {
+            out = out OFS $i
+        }
+        out = out OFS file OFS $NF
+        print out
     }
 }
 
@@ -40,7 +45,9 @@ already_present && NR > 1 {
         # Get marks from the for roll_no from the file
         get_marks = "grep \"" roll_no "\" " file ".csv | cut -d, -f 3 | sed \"s/\\s\\+//g\""
         get_marks |& getline marks
+        $NF += marks - $ind
         $ind = marks
+        # $NF += marks
         # print ind
         close(get_marks)
         print $0
@@ -68,9 +75,21 @@ already_present && NR > 1 {
         get_marks |& getline marks
         close(get_marks)
         gsub(/\r$/, "", $0)
-        print $0, marks
+        # print $0, marks
+        out = $1
+        for (i=2; i < NF; i++) {
+            out = out OFS $i
+        }
+        out = out OFS marks OFS $NF
+        print out
     } else {
         # print "Roll number not present in the file"
-        print $0, "a"
+        # print $0, "a"
+        out = $1
+        for (i=2; i < NF; i++) {
+            out = out OFS $i
+        }
+        out = out OFS "a" OFS $NF
+        print out
     }
 }

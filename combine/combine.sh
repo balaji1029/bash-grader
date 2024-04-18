@@ -18,4 +18,4 @@ else
     bash "$SCRIPT_DIR"/combine/add.sh ${csv_files}
 fi
 
-cat "$MAIN"
+# cat "$MAIN"
