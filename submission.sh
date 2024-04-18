@@ -11,8 +11,8 @@ export CYAN='\033[0;36m'
 export WHITE='\033[0;37m'
 export NC='\033[0m'
 
-export MAIN="main.csv"
 export SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+export MAIN="main.csv"
 
 # usage: This script is used to perform some task.
 usage="Usage: $0 [arguments]\nThis script is used to perform some task.\n
@@ -38,7 +38,7 @@ fi
 # Check if the command is combine
 if [ "$1" == "combine" ]; then
     shift
-    bash combine/combine.sh "$@"
+    bash "$SCRIPT_DIR/combine/combine.sh" "$@"
 
 # Check if the command is upload
 elif [ "$1" == "upload" ]; then
@@ -48,6 +48,9 @@ elif [ "$1" == "upload" ]; then
 # Check if the command is total
 elif [ "$1" == "total" ]; then
     bash total.sh
+
+elif [ "$1" == "update" ]; then
+    bash "update.sh" "$@"
 
 # If the command is not valid
 else
