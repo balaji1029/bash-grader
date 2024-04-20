@@ -35,7 +35,7 @@ already_present && NR > 1 {
     # print "Already present"
     $1 = $1
     roll_no = $1
-    roll_no_present = "grep -c " $1", " file ".csv"
+    roll_no_present = "grep -c \"" $1",\" " file ".csv"
     roll_no_present | getline present
     present = present > 0 ? 1 : 0
     close(roll_no_present)
@@ -62,7 +62,7 @@ already_present && NR > 1 {
 !(already_present) && NR > 1 {
     $1 = $1
     roll_no = $1
-    roll_no_present = "grep -c " $1", " file ".csv"
+    roll_no_present = "grep -c \"" $1",\" " file ".csv"
     roll_no_present | getline present
     present = present > 0 ? 1 : 0
     close(roll_no_present)

@@ -25,7 +25,7 @@ NR > 1 {
     if (count < 1){
         # print $0
         string = roll_no OFS $2
-        for (i=3; i<=NF; i++){
+        for (i=3; i<=NF+1; i++){
             if (i != file_index){
                 string = string OFS "a"
             }

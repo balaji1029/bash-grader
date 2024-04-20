@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-
+echo "" > output
 # echo $@
 for file in "$@"; do
     if [[ "$file" == "$MAIN" ]] || [[ "$file.csv" == "temp.csv" ]]; then
@@ -17,14 +17,19 @@ for file in "$@"; do
         # Check if $MAIN has total header
         if [[ $(head -n 1 "$MAIN") =~ ,total$ ]]; then
             # TODO: Write code if total exists...
-            # echo "TODO"
+            # echo "Adding $file.csv to $MAIN..."
             awk -v file="$file" -f "$SCRIPT_DIR"/combine/add_total.awk "$MAIN" > "$SCRIPT_DIR/temp.csv"
             mv "$SCRIPT_DIR/temp.csv" "$MAIN"
+            # echo "Re-adding $file.csv to $MAIN..."
             awk -v main="$MAIN" -v file="$file" -f "$SCRIPT_DIR"/combine/readd_total.awk "$SCRIPT_DIR/$file.csv"
+            cat "$MAIN" >> output
         else
+            # echo "Adding $file.csv to $MAIN..."
             awk -v file="$file" -f "$SCRIPT_DIR"/combine/add.awk "$MAIN" > "$SCRIPT_DIR/temp.csv"
             mv "$SCRIPT_DIR/temp.csv" "$MAIN"
+            # echo "Re-adding $file.csv to $MAIN..."
             awk -v main="$MAIN" -v file="$file" -f "$SCRIPT_DIR"/combine/readd.awk "$SCRIPT_DIR/$file.csv"
+            cat "$MAIN" >> output
         fi
     fi
 done

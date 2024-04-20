@@ -54,19 +54,20 @@ already_present && NR > 1 {
 # If the file is not present in the csv file, then get the marks from the file are added for every student in the main file
 !(already_present) && NR > 1 {
     $1 = $1
+    # print $1, file, present
     roll_no = $1
-    roll_no_present = "grep -c " $1", " file ".csv"
+    roll_no_present = "grep -c \"" $1",\" " file ".csv"
     roll_no_present | getline present
     present = present > 0 ? 1 : 0
+    # print roll_no_present
     close(roll_no_present)
-    # print present
     if (present == 1) {
         # print "Roll number present in the file"
         # Get marks from the for roll_no from the file
-        get_marks = "grep \"" roll_no "\" " file ".csv | cut -d, -f 3 | sed \"s/\\s\\+//g\""
-        # print get_marks
+        get_marks = "grep \"^" $1 ",\" " file ".csv | cut -d, -f 3 | sed \"s/\\s\\+//g\""
         get_marks |& getline marks
         close(get_marks)
+        # print $1, file, marks
         gsub(/\r$/, "", $0)
         print $0, marks
     } else {
