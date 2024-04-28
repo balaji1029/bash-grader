@@ -23,6 +23,8 @@ student_template_web = 'templates/student-template.html'
 webpage = 'webpages/student.html'
 student_template_tex = 'templates/student_latex.tex'
 
+print(os.path.exists('main.csv'))
+
 # Check if the main.csv exists
 if not os.path.exists('main.csv'):
     print('main.csv does not exist. Please combine first...')

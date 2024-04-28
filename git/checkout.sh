@@ -29,7 +29,7 @@ if [[ ! -e "$dest/.git_log" ]]; then
 fi
 
 # Check if the commit hash is "LAST"
-if [[ $1 -eq "LAST" ]]; then
+if [[ "$1" == "LAST" ]]; then
     go=$(head -n 1 $dest/.git_log | cut -d',' -f2)
 else
     go=$1
@@ -61,10 +61,6 @@ for file in $(ls | grep -E ".*\.csv"); do
     fi
 done
 
-if [[ ${#files[@]} -ne 0 ]]; then
-    echo -e "${RED}Uncommitted changes. Please commit before checking out.${NC}"
-    exit 1
-fi
 
 # Get the commit line of the target commit
 commit=$(grep -E "^commit,$go" $dest/.git_log)
