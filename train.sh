@@ -20,25 +20,31 @@ animate_train() {
     for ((i = $upper_limit; i >= $lower_limit; i--)); do
         clear
         length=$((train_length + i))
+        # Print the offset
         for ((j = 0; j < offset; j++)); do
             echo
         done
+        # Print the train
         for frame in "${frames[@]}"; do
+            # Print the train when the train's head is within the terminal
             if [[ $i -ge 0 ]] && [[ $((i + train_length)) -ge $term_width ]]; then
                 length=$((term_width - i))
                 printf "%${term_width}s\n" "${frame:0:$length}"
+            # Print the train when the train's tail is within the terminal and the head is in the terminal
             elif [[ $i -ge 0 ]] && [[ $((i + train_length)) -lt $term_width ]]; then
                 printf "%$((i + train_length))s\n" "${frame}"
+            # Print the train when the train's head is outside the terminal but the tail is within
             elif [[ $i -lt 0 ]] && [[ $((i + train_length)) -ge $term_width ]]; then
                 length=$term_width
                 printf "%s\n" "${frame:0:$term_width}"
+            # Print the train when the train's head and tail are outside the terminal
             else
                 printf "%s\n" "${frame:$((-i))}"
-                # j=2
             fi
         done
         sleep 0.02
     done
+    clear
 }
 
 # Run the animation function

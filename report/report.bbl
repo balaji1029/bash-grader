@@ -16,26 +16,5 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{balaji}{book}{}
-    \name{author}{1}{}{%
-      {{hash=KB}{%
-         family={Karedla},
-         familyi={K\bibinitperiod},
-         given={Balaji},
-         giveni={B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {The MIT Press}%
-    }
-    \strng{namehash}{KB1}
-    \strng{fullhash}{KB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{title}{Bash Grader}
-  \endentry
-\enddatalist
+\datalist[entry]{nty/global//global/global}\enddatalist
 \endinput

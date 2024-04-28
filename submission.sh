@@ -19,12 +19,12 @@ export MOD=10
 usage="Usage: $0 [arguments]\nThis script is used to perform some task.
 Arguments:\n\n\t\
 ${YELLOW}-h, --help, help${NC}\tShow this help message and exit\n\n\t\
+${YELLOW}train${NC}\t\t\tShows the animation of a train moving along the screen\n\n\t\
 ${YELLOW}combine${NC}\t\t\tCombines the .csv files to give the main.csv\n\n\t\
 ${YELLOW}upload${NC}\t\t\tUploads the files given as arguments\n\t\t\t\tto the present working directory\n\n\t\
 ${YELLOW}total${NC}\t\t\tAdds up the scores of the students\n\t\t\t\tin all the tests\n\t\t\t\tand adds a column total in main.csv\n\n\t\
 ${YELLOW}update${NC}\t\t\tUpdates the main.csv file\n\n\t\
 ${YELLOW}git_init${NC}\t\tInitializes a git repository\n\n\t\
-${YELLOW}git_add${NC}\t\t\tAdds the files to the git repository\n\n\t\
 ${YELLOW}git_commit${NC}\t\tCommits the changes to the git repository\n\n\t\
 ${YELLOW}git_log${NC}\t\t\tShows the log of the git repository\n\n\t\
 ${YELLOW}git_checkout${NC}\t\tChecks out the branch in the git repository\n\n\t\
@@ -224,9 +224,9 @@ elif [ "$1" == "student" ]; then
     python3 student.py "$@"
 
 # Check if the command is absolute_grade
-elif [ "$1" == "absolute_grade" ]; then
+elif [ "$1" == "grade" ]; then
     shift
-    python3 absolute_grade.py "$@"
+    python3 grade.py "$@"
 
 # Check if the command is train
 elif [ "$1" == "train" ]; then

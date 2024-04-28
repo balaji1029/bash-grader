@@ -25,31 +25,31 @@ NR == 1 {
     }
 }
 
-# If the file is already present in the csv file, then get the marks from the file are updated for every student in the main file
-already_present && NR > 1 {
-    # print "Already present"
-    $1 = $1
-    roll_no = $1
-    roll_no_present = "grep -c " $1", " file ".csv"
-    roll_no_present | getline present
-    present = present > 0 ? 1 : 0
-    close(roll_no_present)
-    # print $0, present
-    if (present == 1) {
-        # print "Roll number present in the file"
-        # Get marks from the for roll_no from the file
-        get_marks = "grep \"" roll_no "\" " file ".csv | cut -d, -f 3 | sed \"s/\\s\\+//g\""
-        get_marks |& getline marks
-        $ind = marks
-        # print ind
-        close(get_marks)
-        print $0
-    } else {
-        # print "Roll number not present in the file"
-        $ind = "a"
-        print $0
-    }
-}
+# # If the file is already present in the csv file, then get the marks from the file are updated for every student in the main file
+# already_present && NR > 1 {
+#     # print "Already present"
+#     $1 = $1
+#     roll_no = $1
+#     roll_no_present = "grep -c " $1", " file ".csv"
+#     roll_no_present | getline present
+#     present = present > 0 ? 1 : 0
+#     close(roll_no_present)
+#     # print $0, present
+#     if (present == 1) {
+#         # print "Roll number present in the file"
+#         # Get marks from the for roll_no from the file
+#         get_marks = "grep \"" roll_no "\" " file ".csv | cut -d, -f 3 | sed \"s/\\s\\+//g\""
+#         get_marks |& getline marks
+#         $ind = marks
+#         # print ind
+#         close(get_marks)
+#         print $0
+#     } else {
+#         # print "Roll number not present in the file"
+#         $ind = "a"
+#         print $0
+#     }
+# }
 
 # If the file is not present in the csv file, then get the marks from the file are added for every student in the main file
 !(already_present) && NR > 1 {

@@ -1,1 +1,0 @@
-awk -v file="quiz1.csv" -f exp.awk main.csv
