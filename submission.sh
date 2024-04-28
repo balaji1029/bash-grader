@@ -30,7 +30,7 @@ ${YELLOW}git_log${NC}\t\t\tShows the log of the git repository\n\n\t\
 ${YELLOW}git_checkout${NC}\t\tChecks out the branch in the git repository\n\n\t\
 ${YELLOW}git_config${NC}\t\tConfigures the git repository\n\n\t\
 ${YELLOW}stats${NC}\t\t\tShows the statistics of the students\n\n\t\
-${YELLOW}student${NC}\t\t\tShows the details of the student\n\n\t\
+${YELLOW}student${NC}\t\t\tShows the details of the student's performance\n\n\t\
 ${YELLOW}abs_grade${NC}\t\tShows the absolute grade of the student\n
 ..."
 

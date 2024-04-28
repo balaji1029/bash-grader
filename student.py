@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import argparse
+import closest_name
 
 # Argument parser
 parser = argparse.ArgumentParser(description='Analyse the marks of a student')
@@ -89,6 +90,10 @@ if args.name:
     # Check if the student exists
     if student.empty:
         print('Student not found')
+        print()
+        print('Did you mean?:')
+        closest_name.find('', name)
+        # Find the closest names
         sys.exit(1)
     # Get the student's roll number
     roll_number = student['Roll_number'].values[0]

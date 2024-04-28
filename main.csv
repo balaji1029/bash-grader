@@ -1,6 +1,6 @@
 Roll_number,Name,quiz2,quiz1,endsem,quiz3,midsem,total
 210050102,Murala Vamshi,14.91,17.94,6.94,16.37,5.0,61.16
-23b0901,Kaushal Vijayvergiya,13.28,24.32,3.33,14.46,5.37,60.76
+23b0901,Kaushal Vijayvergiya,49.69,24.32,3.33,14.46,5.37,97.17
 23b0902,Arya Suwalka,7.6,12.76,4.67,15.87,0,40.9
 23b0903,Abhi Jain,11.78,17.46,4.23,14.59,4.65,52.71
 23b0904,Prakhar Jain,10.49,22.1,2.47,14.79,3.49,53.34
@@ -14,8 +14,8 @@ Roll_number,Name,quiz2,quiz1,endsem,quiz3,midsem,total
 23b0912,Sanapala Venkata Aditya,12.84,21.34,5.66,13.37,4.36,57.57
 23b0913,Dipen Sojitra,14.73,25.21,6.65,6.17,4.64,57.4
 23b0915,Nandipati Sai Durga Reddy,10.65,14.69,4.74,3.73,7.25,41.06
-23b0916,Vanguri Eshwar,17.87,11.46,7.19,5.42,4.39,46.33
-23b0917,Rajat Das,14.82,15.96,10,15.0,7.16,62.94
+23b0916,Vanguri Eshwar,17.87,1.46,7.19,5.42,4.39,36.33
+23b0917,Rajat Das,1.82,15.96,10,15.0,7.16,49.94
 23b0918,Banoth Tharun Tej,20,9.38,5.59,11.8,6.85,53.62
 23b0919,Yougank Kumar,8.37,14.43,5.29,7.4,9.53,45.02
 23b0920,Maradana Dheeraj Kumar,16.71,12.34,8.22,4.46,8.42,50.15
@@ -184,4 +184,6 @@ Roll_number,Name,quiz2,quiz1,endsem,quiz3,midsem,total
 23b0962,Banothu Sonusree,a,15.66,4.74,10.92,7.69,39.01
 23b0978,Gowdu Charishma,a,22.02,8.76,12.71,7.59,51.08
 23b1004,Karri Ganga Dhana Sri,a,20.16,5.41,15.3,7.45,48.32
+23b3036,Hari,a,134,a,a,a,134
+23b2345,harit,a,223,a,a,a,223
 23b1086,Shivam Kumar,a,a,a,12.0,a,12
