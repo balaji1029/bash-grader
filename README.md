@@ -7,6 +7,7 @@ The Bash Grader project is a collection of bash scripts designed to manage stude
 - Version Control: Initialize a repository, commit changes, and checkout previous versions.
 - Statistics: Generate statistical analyses and histograms of student marks.
 - Command Autocomplete: Provides command-line auto-completion for enhanced user experience.
+- Fuzzy Finder: Provides suggestions for names if the name is not found on the list.
 ## Prerequisites
 - Bash
 - AWK
