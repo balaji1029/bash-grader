@@ -69,7 +69,7 @@ bash submission.sh git_config user.email "your.email@example.com"
 Commits changes to the repository with a message.
 
 ```sh
-./git_commit.sh -m "Your commit message"
+bash submission.sh git_commit.sh -m "Your commit message"
 ```
 
 #### git_checkout
@@ -83,7 +83,7 @@ bash submission.sh git_checkout <commit-hash>
 Displays the commit log.
 
 ```sh
-./git_log.sh [--oneline]
+bash submission.sh git_log.sh [--oneline]
 ```
 ### Update Command
 #### update
